@@ -1,19 +1,23 @@
 package com.springboot.nbshop.entity;
 
-import lombok.Data;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
-import javax.persistence.*;
+import lombok.Data;
 
 @Entity
 @Data
 public class Category {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "category_id")
-    private int id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "category_id")
+	private int id;
 
-    @Column(name = "name", columnDefinition = "nvarchar(255)")
-    private String name;
+	@Column(name = "name", columnDefinition = "nvarchar(255)")
+	private String name;
 
 	public int getId() {
 		return id;
@@ -30,7 +34,5 @@ public class Category {
 	public void setName(String name) {
 		this.name = name;
 	}
-    
-    
 
-}//create table mapping trong db
+}

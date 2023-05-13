@@ -1,22 +1,22 @@
 package com.springboot.nbshop.dto;
 
-import lombok.Data;
-
 import java.util.List;
+
+import lombok.Data;
 
 @Data
 public class UserDTO {
-    private Integer id;
+	private Integer id;
 
-    private String email;
+	private String email;
 
-    private String password;
+	private String password;
 
-    private List<Integer> roleIds;
+	private List<Integer> roleIds;
 
-    private String firstName;
+	private String firstName;
 
-    private String lastName;
+	private String lastName;
 
 	public Integer getId() {
 		return id;
@@ -65,7 +65,5 @@ public class UserDTO {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-    
-    
 
 }
